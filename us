@@ -6,53 +6,53 @@ xkb_symbols "basic" {
 
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
     key <TLDE> {	[     grave,	asciitilde	]	};
-    key <AE01> {	[	  1,	exclam, F1, F1 		]	};
-    key <AE02> {	[	  2,	at, F2, F2		]	};
-    key <AE03> {	[	  3,	numbersign, F3, F3	]	};
-    key <AE04> {	[	  4,	dollar, F4, F4		]	};
-    key <AE05> {	[	  5,	percent, F5, F5		]	};
-    key <AE06> {	[	  6,	asciicircum, F6, F6	]	};
-    key <AE07> {	[	  7,	ampersand, F7, F7	]	};
-    key <AE08> {	[	  8,	asterisk, F8, F8	]	};
-    key <AE09> {	[	  9,	parenleft, F9, F9	]	};
-    key <AE10> {	[	  0,	parenright, F10, F10	]	};
-    key <AE11> {	[     minus,	underscore, F11, F11	]	};
-    key <AE12> {	[     equal,	plus, F12, F12		]	};
+    key <AE01> {	[	  1,	exclam]	};
+    key <AE02> {	[	  2,	at]	};
+    key <AE03> {	[	  3,	numbersign]	};
+    key <AE04> {	[	  4,	dollar]	};
+    key <AE05> {	[	  5,	percent]	};
+    key <AE06> {	[	  6,	asciicircum]	};
+    key <AE07> {	[	  7,	ampersand]	};
+    key <AE08> {	[	  8,	asterisk]	};
+    key <AE09> {	[	  9,	parenleft]	};
+    key <AE10> {	[	  0,	parenright]	};
+    key <AE11> {	[     minus,	underscore]	};
+    key <AE12> {	[     equal,	plus]	};
 
 
 
 	key <AD01> {	[	  q,	Q, 1, exclam	]	};
-	key <AD02> {	[	  w,	W, 2, at,  KP_Up, 0x087f, 0x087f, 0x087f		]	};
-	key <AD03> {	[	  e,	E, 3, numbersign		]	};
-	key <AD04> {	[	  r,	R, 4, dollar, KP_Hold, KP_Hold, KP_Hold, KP_Hold		]	};
-	key <AD05> {	[	  t,	T, 5, percent		]	};
-	key <AD06> {	[	  y,	Y, 6, asciicircum		]	};
-	key <AD07> {	[	  u,	U, 7, ampersand		]	};
+	key <AD02> {	[	  w,	W, 2, at, KP_Up, KP_Up  ]	};
+	key <AD03> {	[	  e,	E, 3, numbersign, KP_Up, KP_Up		]	};
+	key <AD04> {	[	  r,	R, 4, dollar, KP_Up, KP_Up		]	};
+	key <AD05> {	[	  t,	T, 5, percent, KP_Up, KP_Up		]	};
+	key <AD06> {	[	  y,	Y, 6, asciicircum 		]	};
+	key <AD07> {	[	  u,	U, 7, ampersand 		]	};
     key <AD08> {	[ 	 i, I,		 Up,	 Up	]	}; 
-	key <AD09> {	[	  o,	O, 9, parenleft		]	};
+	key <AD09> {	[	  o,	O, 9, parenleft	]	};
     key <AD10> {	[	  p,	P		]	};
     key <AD11> {	[ bracketleft,	braceleft	]	};
     key <AD12> {	[ bracketright,	braceright	]	};
 
-    key <AC01> {	[	  a,	A, grave,	asciitilde, KP_Left, 0x087f, 0x087f, 0x087f 		]	};
-    key <AC02> {	[	  s,	S, 0x087f, 0x087f, KP_Down, 0x087f, 0x087f, 0x087f		]	};
-    key <AC03> {	[	  d,	D, Escape,		Escape, KP_Right, 0x087f, 0x087f, 0x087f		]	};
-    key <AC04> {	[ 	 f, F,		 Return, Return, KP_Hold, KP_Hold, KP_Hold, KP_Hold ]	};
-    key <AC05> {	[	  g,	G		]	};
-    key <AC06> {	[	  h,	H, Delete, Delete		]	};
+    key <AC01> {	[	  a,	A, grave,	asciitilde, KP_Up, KP_Up		]	};
+    key <AC02> {	[	  s,	S, Backspace, Backspace, KP_Up, KP_Up		]	};
+    key <AC03> {	[	  d,	D, Escape, Escape, KP_Up, KP_Up		]	};
+    key <AC04> {	[ 	 f, F,		 Return, Return, KP_Up, KP_Up ]	};
+    key <AC05> {	[	  g,	G, Prior, Prior		]	};
+    key <AC06> {	[	  h,	H, Delete, Delete 	]	};
     key <AC07> {    [    j, J,     Left, Left      ] };
     key <AC08> {	[ 	 k, K,		 Down,		Down	] 	};
-    key <AC09> {	[ 	 l, L,		 Right,		Down	]	};
+    key <AC09> {	[ 	 l, L,		 Right,		Right	]	};
     key <AC10> {	[ semicolon,	colon		]	};
     key <AC11> {	[ apostrophe,	quotedbl	]	};
 
-    key <AB01> {	[	  z,	Z 	]	};
-    key <AB02> {	[	  x,	X		]	};
-    key <AB03> {	[	  c,	C, 0x087f, 0x087f, Pointer_Button3, Pointer_Button3, 0x087f, 0x087f		]	};
-    key <AB04> {	[	  v,	V		]	};
-    key <AB05> {	[	  b,	B		]	};
+    key <AB01> {	[	  z,	Z, Home, Home 	]	};
+    key <AB02> {	[	  x,	X, End, End, KP_Up, KP_Up		]	};
+    key <AB03> {	[	  c,	C, d, D, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3		]	};
+    key <AB04> {	[	  v,	V, Insert, Insert		]	};
+    key <AB05> {	[	  b,	B, Next, Next, KP_Up, KP_Up		]	};
     key <AB06> {	[	  n,	N, 8, asterisk		]	};
-    key <AB07> {	[	  m,	M, 0, parenright, Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2		]	};
+    key <AB07> {	[	  m,	M, 9, parenright, Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2		]	};
     key <AB08> {	[     comma,	less		]	};
     key <AB09> {	[    period,	greater		]	};
     key <AB10> {	[     slash,	question	]	};
@@ -67,27 +67,87 @@ xkb_symbols "basic" {
 
 
    include "level3(ralt_switch)"
-   key <CAPS> { [ ISO_Level5_Shift ] }; // Cur/Num Modifier
+   key <CAPS> { [ ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift ] }; // Cur/Num Modifier
    modifier_map Mod3 { <CAPS> };
-};
-
-xkb_symbols "ralt_switch2" {
-  key <CAPS> {
-	symbols[Group1] = [ ISO_Prev_Group ]
-  };
 };
 
 partial alphanumeric_keys
 xkb_symbols "euro" {
 
-    include "us(basic)"
-    name[Group1]= "English (US, euro on 5)";
+    key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
+    
+    key <TLDE> {  [     Arabic_thal,        Arabic_shadda,            Arabic_percent,               U0609 ]};
+    key <AE01> {  [               1,               exclam,                  Arabic_1,            NoSymbol ]};
+    key <AE02> {  [               2,                   at,                  Arabic_2,            NoSymbol ]};
+    key <AE03> {  [               3,           numbersign,                  Arabic_3,            NoSymbol ]};
+    key <AE04> {  [               4,               dollar,                  Arabic_4,            NoSymbol ]};
+    key <AE05> {  [               5,              percent,                  Arabic_5,               U2030 ]};
+    key <AE06> {  [               6,          asciicircum,                  Arabic_6,            NoSymbol ]};
+    key <AE07> {  [               7,            ampersand,                  Arabic_7,            NoSymbol ]};
+    key <AE08> {  [               8,             asterisk,                  Arabic_8,            NoSymbol ]};
+    key <AE09> {  [               9,           parenright,                  Arabic_9,            NoSymbol ]};
+    key <AE10> {  [               0,            parenleft,                  Arabic_0,            NoSymbol ]};
+    key <AE11> {  [           minus,           underscore,                    endash,               U2011 ]};
+    key <AE12> {  [           equal,                 plus,                  notequal,               U2248 ]};
 
-    key <LSGT> {	[ backslash,         bar	]	};
+    key <AD01> {  [      Arabic_dad,         Arabic_fatha,                  NoSymbol,               U2066 ]};
+    key <AD02> {  [      Arabic_sad,      Arabic_fathatan,                  NoSymbol,               U2067, KP_Up, KP_Up ]};
+    key <AD03> {  [     Arabic_theh,         Arabic_damma,                  NoSymbol,               U2068 ]};
+    key <AD04> {  [      Arabic_qaf,      Arabic_dammatan,                  NoSymbol,               U2069, KP_Up, KP_Up ]};
+    key <AD05> {  [      Arabic_feh,                UFEF9,                Arabic_veh,            NoSymbol ]};
+    key <AD06> {  [    Arabic_ghain,Arabic_hamzaunderalef,                  NoSymbol,               U202A ]};
+    key <AD07> {  [      Arabic_ain,                grave,                  NoSymbol,               U202B ]};
+    key <AD08> {  [       Arabic_ha,             division,		 Up,	 Up ]};
+    key <AD09> {  [     Arabic_khah,             multiply,                  NoSymbol,            NoSymbol ]};
+    key <AD10> {  [      Arabic_hah,     Arabic_semicolon,                  NoSymbol,               U200E ]};
+    key <AD11> {  [     Arabic_jeem,                 less,              Arabic_tcheh,               U200F ]};
+    key <AD12> {  [      Arabic_dal,              Arabic_thal,                  NoSymbol,               U061C ]};
 
-    include "eurosign(5)"
+    key <AC01> {  [    Arabic_sheen,         Arabic_kasra,                  NoSymbol,            NoSymbol, KP_Up, KP_Up ]};
+    key <AC02> {  [     Arabic_seen,      Arabic_kasratan, Backspace, Backspace, KP_Up, KP_Up ]};
+    key <AC03> {  [      Arabic_yeh,         bracketright, Escape, Escape, KP_Up, KP_Up ]};
+    key <AC04> {  [      Arabic_beh,          bracketleft,		 Return, Return, KP_Up, KP_Up ]};
+    key <AC05> {  [      Arabic_lam,               U0FEF7,                  NoSymbol,            NoSymbol ]};
+    key <AC06> {  [     Arabic_alef,   Arabic_hamzaonalef,                     U0671,            NoSymbol ]};
+    key <AC07> {  [      Arabic_teh,       Arabic_tatweel,     Left, Left ]};
+    key <AC08> {  [     Arabic_noon,         Arabic_comma,		 Down,		Down ]};
+    key <AC09> {  [     Arabic_meem,                slash,		 Right,		Right ]};
+    key <AC10> {  [      Arabic_kaf,                colon,                Arabic_gaf,            NoSymbol ]};
+    key <AC11> {  [      Arabic_tah,             quotedbl,                     U27E9,               U200D ]};
+    key <BKSL> {  [       backslash,             ellipsis,                     U27E8,               U202F ]};
 
-    include "level3(ralt_switch)"
+    key <LSGT> {  [             bar,            brokenbar,                  NoSymbol,            NoSymbol ]};
+    key <AB01> { [Arabic_hamzaonyeh,           asciitilde,            guillemotright,               U203A ]};
+    key <AB02> {  [    Arabic_hamza,         Arabic_sukun,             guillemotleft,               U2039 ]};
+    key <AB03> { [Arabic_hamzaonwaw,           braceright,                  NoSymbol,            NoSymbol, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3 ]};
+    key <AB04> {  [       Arabic_ra,            braceleft,                  NoSymbol,            NoSymbol ]};
+    key <AB05> {  [           UFEFB,                UFEF5,                  NoSymbol,            NoSymbol ]};
+    key <AB06> {[Arabic_alefmaksura,   Arabic_maddaonalef,   Arabic_superscript_alef,            NoSymbol ]};
+    key <AB07> { [Arabic_tehmarbuta,           apostrophe,                  NoSymbol,            NoSymbol, Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2 ]};
+    key <AB08> {  [      Arabic_waw,                comma,                     U066C,            NoSymbol ]};
+    key <AB09> {  [     Arabic_zain,               period,                Arabic_jeh,            NoSymbol ]};
+    key <AB10> {  [      Arabic_zah, Arabic_question_mark,                     U066D,               U200C ]};
+    
+    key <TLDE> { [Arabic_thal,Arabic_shadda, percent,U2030]};
+    key <AE01> { [ Arabic_1,         exclam, 1, NoSymbol ] };
+    key <AE02> { [ Arabic_2,             at, 2, NoSymbol ] };
+    key <AE03> { [ Arabic_3,     numbersign, 3, NoSymbol ] };
+    key <AE04> { [ Arabic_4,         dollar, 4, NoSymbol ] };
+    key <AE05> { [ Arabic_5, Arabic_percent, 5, U0609    ] };
+    key <AE06> { [ Arabic_6,    asciicircum, 6, NoSymbol ] };
+    key <AE07> { [ Arabic_7,      ampersand, 7, NoSymbol ] };
+    key <AE08> { [ Arabic_8,       asterisk, 8, NoSymbol ] };
+    key <AE09> { [ Arabic_9,     parenright, 9, NoSymbol ] };
+    key <AE10> { [ Arabic_0,      parenleft, 0, NoSymbol ] };
+
+
+   key <SPCE> { [        space,        space,  0x0800, Pointer_EnableKeys, Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] };
+   key <TLDE> { [    grave, asciitilde,  dead_grave,   dead_tilde      ] };
+
+
+   include "level3(ralt_switch)"
+   key <CAPS> { [ ISO_Level5_Shift ] }; // Cur/Num Modifier
+   modifier_map Mod3 { <CAPS> };
 };
 
 
@@ -2364,5 +2424,6 @@ xkb_symbols "de_se_fi"  {
 
     include "level3(ralt_switch)"
 };
+
 
 
