@@ -21,7 +21,7 @@ xkb_symbols "basic" {
 
 
 
-	key <AD01> {	[	  q,	Q, 1, exclam	]	};
+	key <AD01> {	[	  q,	Q, grave,	asciitilde	]	};
 	key <AD02> {	[	  w,	W, 2, at, KP_Up, KP_Up  ]	};
 	key <AD03> {	[	  e,	E, 3, numbersign, KP_Up, KP_Up		]	};
 	key <AD04> {	[	  r,	R, 4, dollar, KP_Up, KP_Up		]	};
@@ -34,7 +34,7 @@ xkb_symbols "basic" {
     key <AD11> {	[ bracketleft,	braceleft	]	};
     key <AD12> {	[ bracketright,	braceright	]	};
 
-    key <AC01> {	[	  a,	A, grave,	asciitilde, KP_Up, KP_Up		]	};
+    key <AC01> {	[	  a,	A, 1, exclam, KP_Up, KP_Up		]	};
     key <AC02> {	[	  s,	S, Backspace, Backspace, KP_Up, KP_Up		]	};
     key <AC03> {	[	  d,	D, Escape, Escape, KP_Up, KP_Up		]	};
     key <AC04> {	[ 	 f, F,		 Return, Return, KP_Up, KP_Up ]	};
