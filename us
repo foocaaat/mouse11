@@ -29,7 +29,7 @@ xkb_symbols "basic" {
 	key <AD06> {	[	  y,	Y, 6, asciicircum 		]	};
 	key <AD07> {	[	  u,	U, 7, ampersand 		]	};
     key <AD08> {	[ 	 i, I,		 Up,	 Up	]	}; 
-	key <AD09> {	[	  o,	O, 0,            parenleft	]	};
+	key <AD09> {	[	  o,	O, 0,            parenleft, KP_Up, KP_Up	]	};
     key <AD10> {	[	  p,	P		]	};
     key <AD11> {	[ bracketleft,	braceleft	]	};
     key <AD12> {	[ bracketright,	braceright	]	};
@@ -46,10 +46,10 @@ xkb_symbols "basic" {
     key <AC10> {	[ semicolon,	colon		]	};
     key <AC11> {	[ apostrophe,	quotedbl	]	};
 
-    key <AB01> {	[	  z,	Z, Home, Home 	]	};
-    key <AB02> {	[	  x,	X, End, End, KP_Up, KP_Up		]	};
-    key <AB03> {	[	  c,	C, d, D, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3		]	};
-    key <AB04> {	[	  v,	V, Insert, Insert		]	};
+    key <AB01> {	[	  z,	Z, Insert, Insert 	]	};
+    key <AB02> {	[	  x,	X, bracketleft, bracketright, KP_Up, KP_Up		]	};
+    key <AB03> {	[	  c,	C, braceleft, braceright, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3		]	};
+    key <AB04> {	[	  v,	V, parenleft, parenright		]	};
     key <AB05> {	[	  b,	B, Next, Next, KP_Up, KP_Up		]	};
     key <AB06> {	[	  n,	N, 8, asterisk		]	};
     key <AB07> {	[	  m,	M, 9, parenleft, Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2		]	};
