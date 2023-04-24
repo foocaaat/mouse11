@@ -46,7 +46,7 @@ xkb_symbols "basic" {
     key <AC10> {	[ semicolon,	colon		]	};
     key <AC11> {	[ apostrophe,	quotedbl	]	};
 
-    key <AB01> {	[	  z,	Z, Insert, Insert 	]	};
+    key <AB01> {	[	  z,	Z, less, greater 	]	};
     key <AB02> {	[	  x,	X, bracketleft, bracketright, KP_Up, KP_Up		]	};
     key <AB03> {	[	  c,	C, braceleft, braceright, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3		]	};
     key <AB04> {	[	  v,	V, parenleft, parenright		]	};
