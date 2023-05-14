@@ -41,6 +41,22 @@ windows = 0
 xmouse = os.path.join(script_dir, ".Xmouse")
 windows = 0
 
+w1=0
+w2=0
+w3=0
+w4=0
+w5=0
+w6=0
+w7=0
+w8=0
+w9=0
+w10=0
+w11=0
+w12=0
+
+
+
+
 while True:
     if key == 0:
         keyboard.wait("capslock")
@@ -118,24 +134,97 @@ while True:
             mouse.scroll(1,0)
             time.sleep(0.1)
 
-        if keyboard.is_pressed('h') == True and l2 == 0:
-            keyboard2.press(Key.ctrl)
-            l2=1
-        if keyboard.is_pressed('h') == False and l2 == 1:
-            keyboard2.release(Key.ctrl)
-            l2=0
-        if keyboard.is_pressed('y') == True and r2 == 0:
-            keyboard2.press(Key.alt)
-            r2=1
-        if keyboard.is_pressed('y') == False and r2 == 1:
-            keyboard2.release(Key.alt)
-            r2=0
-        if keyboard.is_pressed('u') == True and b2 == 0:
-            keyboard2.press(Key.shift)
-            b2=1
-        if keyboard.is_pressed('u') == False and b2 == 1:
-            keyboard2.release(Key.shift)
-            b2=0
+        if keyboard.is_pressed('space'):
+            if keyboard.is_pressed('h') == True and l2 == 0:
+                keyboard2.press(Key.ctrl)
+                l2=1
+            if keyboard.is_pressed('h') == False and l2 == 1:
+                keyboard2.release(Key.ctrl)
+                l2=0
+            if keyboard.is_pressed('y') == True and r2 == 0:
+                keyboard2.press(Key.alt)
+                r2=1
+            if keyboard.is_pressed('y') == False and r2 == 1:
+                keyboard2.release(Key.alt)
+                r2=0
+            if keyboard.is_pressed('u') == True and b2 == 0:
+                keyboard2.press(Key.shift)
+                b2=1
+            if keyboard.is_pressed('u') == False and b2 == 1:
+                keyboard2.release(Key.shift)
+                b2=0
+
+            if keyboard.is_pressed('1') == True and w1 == 0:
+                os.system( "i3 workspace 1")
+                w1=1
+            if keyboard.is_pressed('1') == False and w1 == 1:
+                w1=0
+
+            if keyboard.is_pressed('2') == True and w2 == 0:
+                os.system( "i3 workspace 2")
+                w2=1
+            if keyboard.is_pressed('2') == False and w2 == 1:
+                w2=0
+
+            if keyboard.is_pressed('3') == True and w3 == 0:
+                os.system( "i3 workspace 3")
+                w3=1
+            if keyboard.is_pressed('3') == False and w3 == 1:
+                w3=0
+
+            if keyboard.is_pressed('4') == True and w4 == 0:
+                os.system( "i3 workspace 4")
+                w4=1
+            if keyboard.is_pressed('4') == False and w4 == 1:
+                w4=0
+
+            if keyboard.is_pressed('5') == True and w5 == 0:
+                os.system( "i3 workspace 5")
+                w5=1
+            if keyboard.is_pressed('5') == False and w5 == 1:
+                w5=0
+
+            if keyboard.is_pressed('6') == True and w6 == 0:
+                os.system( "i3 workspace 6")
+                w6=1
+            if keyboard.is_pressed('6') == False and w6 == 1:
+                w6=0
+
+            if keyboard.is_pressed('7') == True and w7 == 0:
+                os.system( "i3 workspace 7")
+                w7=1
+            if keyboard.is_pressed('7') == False and w7 == 1:
+                w7=0
+
+            if keyboard.is_pressed('8') == True and w8 == 0:
+                os.system( "i3 workspace 8")
+                w8=1
+            if keyboard.is_pressed('8') == False and w8 == 1:
+                w8=0
+
+            if keyboard.is_pressed('9') == True and w9 == 0:
+                os.system( "i3 workspace 9")
+                w9=1
+            if keyboard.is_pressed('9') == False and w9 == 1:
+                w9=0
+
+            if keyboard.is_pressed('0') == True and w10 == 0:
+                os.system( "i3 workspace 10")
+                w10=1
+            if keyboard.is_pressed('0') == False and w10 == 1:
+                w10=0
+
+            if keyboard.is_pressed('-') == True and w11 == 0:
+                os.system( "i3 workspace 11")
+                w11=1
+            if keyboard.is_pressed('-') == False and w11 == 1:
+                w11=0
+
+            if keyboard.is_pressed('=') == True and w12 == 0:
+                os.system( "i3 workspace 12")
+                w12=1
+            if keyboard.is_pressed('=') == False and w12 == 1:
+                w12=0
 
     if keyboard.is_pressed('capslock') == False and key == 1:
         os.system( "xkbset -mousekeys &")
