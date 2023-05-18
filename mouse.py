@@ -134,26 +134,26 @@ while True:
             mouse.scroll(1,0)
             time.sleep(0.1)
 
-        if keyboard.is_pressed('space'):
-            if keyboard.is_pressed('h') == True and l2 == 0:
-                keyboard2.press(Key.ctrl)
-                l2=1
-            if keyboard.is_pressed('h') == False and l2 == 1:
-                keyboard2.release(Key.ctrl)
-                l2=0
-            if keyboard.is_pressed('y') == True and r2 == 0:
-                keyboard2.press(Key.alt)
-                r2=1
-            if keyboard.is_pressed('y') == False and r2 == 1:
-                keyboard2.release(Key.alt)
-                r2=0
-            if keyboard.is_pressed('u') == True and b2 == 0:
-                keyboard2.press(Key.shift)
-                b2=1
-            if keyboard.is_pressed('u') == False and b2 == 1:
-                keyboard2.release(Key.shift)
-                b2=0
+        if keyboard.is_pressed('h') == True and l2 == 0:
+            keyboard2.press(Key.ctrl)
+            l2=1
+        if keyboard.is_pressed('h') == False and l2 == 1:
+            keyboard2.release(Key.ctrl)
+            l2=0
+        if keyboard.is_pressed('y') == True and r2 == 0:
+            keyboard2.press(Key.alt)
+            r2=1
+        if keyboard.is_pressed('y') == False and r2 == 1:
+            keyboard2.release(Key.alt)
+            r2=0
+        if keyboard.is_pressed('u') == True and b2 == 0:
+            keyboard2.press(Key.shift)
+            b2=1
+        if keyboard.is_pressed('u') == False and b2 == 1:
+            keyboard2.release(Key.shift)
+            b2=0
 
+        if keyboard.is_pressed('space'):
             if keyboard.is_pressed('1') == True and w1 == 0:
                 os.system( "i3 workspace 1")
                 w1=1
