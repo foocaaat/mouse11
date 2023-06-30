@@ -51,13 +51,16 @@ addr = ("192.168.1.56", 12000)
 while True:
     time.sleep(0.030)
     if key == 0:
-        keyboard2.release(Key.ctrl)
-        keyboard2.release(Key.alt)
-        keyboard2.release(Key.shift)
         try:
-            client_socket.sendto(b'2', addr)
-            client_socket.sendto(b'4', addr)
-            client_socket.sendto(b'6', addr)
+            if keyboard.is_pressed('h') == False and l2 == 1:
+                client_socket.sendto(b'2', addr)
+                l2=0
+            if keyboard.is_pressed('y') == False and r2 == 1:
+                client_socket.sendto(b'4', addr)
+                r2=0
+            if keyboard.is_pressed('u') == False and b2 == 1:
+                client_socket.sendto(b'6', addr)
+                b2=0
         except:
             pass
         os.system( "setxkbmap &")
@@ -95,8 +98,5 @@ while True:
             b2=0
 
     if keyboard.is_pressed('capslock') == False and key == 1:
-        keyboard2.release(Key.ctrl)
-        keyboard2.release(Key.alt)
-        keyboard2.release(Key.shift)
         key = 0
 
