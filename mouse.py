@@ -29,6 +29,72 @@ except:
 # mouse=Controller()
 
 os.system("xset r rate 300 60")
+level5 = """
+// Fairly complete set of symbol interpretations
+// to provide reasonable default behavior.
+
+default partial xkb_compatibility "default" {
+
+    virtual_modifiers  LevelFive;
+
+    interpret.repeat= False;
+    setMods.clearLocks= True;
+    latchMods.clearLocks= True;
+    latchMods.latchToLock= True;
+
+    interpret ISO_Level5_Shift+Any {
+	useModMapMods= level1;
+	virtualModifier= LevelFive;
+	action= SetMods(modifiers=LevelFive);
+    };
+
+    interpret ISO_Level5_Shift {
+	action= SetMods(modifiers=LevelFive);
+    };
+
+    interpret ISO_Level5_Latch+Any {
+	useModMapMods= level1;
+	virtualModifier= LevelFive;
+	action= LatchMods(modifiers=LevelFive);
+    };
+
+    interpret ISO_Level2_Latch+AnyOf(all) {
+    useModMapMods=level1;
+    action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
+    };
+    interpret ISO_Level2_Latch+AnyOfOrNone(all) {
+r   action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
+    };
+
+    interpret ISO_Level5_Latch {
+	action= LatchMods(modifiers=LevelFive);
+    };
+
+    interpret ISO_Level5_Lock+Any {
+	useModMapMods= level1;
+	virtualModifier= LevelFive;
+	action= LockMods(modifiers=LevelFive);
+    };
+
+    interpret ISO_Level5_Lock {
+	action= LockMods(modifiers=LevelFive);
+    };
+};
+
+partial xkb_compatibility "level5_lock" {
+    // This defines a Level5-Lock using the NumLock real modifier
+    // in order to create arbitrary level-behaviour, which would
+    // not be possible with the virtual modifier.
+    // See also: types/level5 : EIGHT_LEVEL_LEVEL_FIVE_LOCK
+    // See also: symbols/level5(lock)
+
+    virtual_modifiers  NumLock;
+
+    interpret ISO_Level5_Lock {
+	action = LockMods(modifiers = NumLock);
+    };
+};
+"""
 mousekeys = """
 default partial xkb_compatibility "mousekeys" {
 
@@ -2664,6 +2730,9 @@ with open("/usr/share/X11/xkb/symbols/us", "w") as f: # open the destination fil
     f.close()
 with open("/usr/share/X11/xkb/compact/mousekeys", "w") as f: # open the destination file in write mode
     f.write(mousekeys) # write the big string to the file
+    f.close()
+with open("/usr/share/X11/xkb/compat/level5", "w") as f: # open the destination file in write mode
+    f.write(level5) # write the big string to the file
     f.close()
 
 def ax(velocity, pos, neg):
