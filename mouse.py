@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 import sys
 import os
+import time
 script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 xmod = os.path.join(script_dir, "xmods")
 mose = os.path.join(script_dir, "mose.sh")
 import keyboard 
-import time
 import mouse
 from pynput.keyboard import Key, Controller
 keyboard2 = Controller()

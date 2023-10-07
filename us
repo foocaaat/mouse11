@@ -31,8 +31,8 @@ xkb_symbols "basic" {
     key <AD08> {	[ 	 i, I,		 Up,	 Up	]	}; 
 	key <AD09> {	[	  o,	O, 0,            parenleft, KP_Up, KP_Up	]	};
     key <AD10> {	[	  p,	P		]	};
-    key <AD11> {	[ exclam,	braceleft	]	};
-    key <AD12> {	[ question,	braceright	]	};
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
 
     key <AC01> {	[	  a,	A, 1, exclam, KP_Up, KP_Up		]	};
     key <AC02> {	[	  s,	S, Backspace, Backspace, KP_Up, KP_Up		]	};
@@ -53,8 +53,8 @@ xkb_symbols "basic" {
     key <AB05> {	[	  b,	B, equal,	plus, KP_Up, KP_Up		]	};
     key <AB06> {	[	  n,	N, 8, asterisk		]	};
     key <AB07> {	[	  m,	M, 9, parenleft, Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2		]	};
-    key <AB08> {	[     comma,	less		]	};
-    key <AB09> {	[    period,	greater		]	};
+    key <AB08> {	[     comma,	less, comma,	less		]	};
+    key <AB09> {	[    period,	greater, period,	greater		]	};
     key <AB10> {	[     slash,	question	]	};
 
     key <BKSL> {	[ backslash,         bar	]	};
