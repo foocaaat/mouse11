@@ -65,7 +65,7 @@ default partial xkb_compatibility "default" {
     action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
     };
     interpret ISO_Level2_Latch+AnyOfOrNone(all) {
-r   action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
+    action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
     };
 
     interpret ISO_Level5_Latch {
@@ -330,13 +330,13 @@ xkb_symbols "basic" {
 	key <AD06> {	[	  y,	Y, 1, 1, KP_Up, KP_Up 		]	};
 	key <AD07> {	[	  u,	U, 7, ampersand, KP_Up, KP_Up 		]	};
     key <AD08> {	[ 	 i, I,		 Up,	 Up	]	}; 
-	key <AD09> {	[	  o,	O, 0,            parenleft, KP_Up, KP_Up	]	};
+	key <AD09> {	[	  o,	O, 0,    parenleft, KP_Up, KP_Up	]	};
     key <AD10> {	[	  p,	P		]	};
     key <AD11> {	[ bracketleft,	braceleft	]	};
     key <AD12> {	[ bracketright,	braceright	]	};
 
     key <AC01> {	[	  a,	A, 1, exclam, KP_Up, KP_Up		]	};
-    key <AC02> {	[	  s,	S, Backspace, Backspace, KP_Up, KP_Up		]	};
+    key <AC02> {	[	  s,	S, Return, Return, KP_Up, KP_Up		]	};
     key <AC03> {	[	  d,	D, Escape, Escape, KP_Up, KP_Up		]	};
     key <AC04> {	[ 	 f, F,		 5, percent, KP_Up, KP_Up ]	};
     key <AC05> {	[	  g,	G, 6, asciicircum		]	};
