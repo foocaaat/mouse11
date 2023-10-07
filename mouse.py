@@ -2737,6 +2737,8 @@ xkb_symbols "de_se_fi"  {
         f.write(level5) # write the big string to the file
         f.close()
     os.system( "setxkbmap us &")
+    import keyboard 
+    import mouse
 
 def ax(velocity, pos, neg):
     if (pos == 0 and neg == 0):
