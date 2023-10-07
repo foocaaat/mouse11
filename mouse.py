@@ -13,7 +13,6 @@ try:
     import keyboard 
     import mouse
 except:
-    os.system("sudo apt install git")
     os.system("sudo apt install xdotool")
     os.system("git clone https://github.com/boppreh/keyboard")
     os.system("mv keyboard keyboard2")
@@ -28,6 +27,209 @@ except:
 # keyboard2 = Controller()
 # from pynput.mouse import Controller,Button
 # mouse=Controller()
+
+os.system("xset r rate 300 60")
+mousekeys = """
+default partial xkb_compatibility "mousekeys" {
+
+    // Keypad actions.
+
+    interpret.repeat= True;
+
+    interpret KP_1 {
+	action = MovePtr(x=-1,y= +1);
+    };
+    interpret KP_End {
+	action = MovePtr(x=-1,y= +1);
+    };
+    interpret KP_Hold {
+	action = MovePtr(x=+0,y= +0);
+    };
+
+    interpret KP_2 {
+	action = MovePtr(x=+0,y= +1);
+    };
+    interpret KP_Down {
+	action = MovePtr(x=+0,y=+0);
+    };
+
+    interpret KP_3 {
+	action = MovePtr(x=+1,y=+1);
+    };
+    interpret KP_Next {
+	action = MovePtr(x=+1,y=+1);
+    };
+
+    interpret KP_4 {
+	action = MovePtr(x=-1,y=+0);
+    };
+    interpret KP_Left {
+	action = MovePtr(x=+0,y=+0);
+    };
+
+    interpret KP_6 {
+	action = MovePtr(x=+1,y=+0);
+    };
+    interpret KP_Right {
+	action = MovePtr(x=+0,y=+0);
+    };
+
+    interpret KP_7 {
+	action = MovePtr(x=-1,y=-1);
+    };
+    interpret KP_Home {
+	action = MovePtr(x=-1,y=-1);
+    };
+
+    interpret KP_8 {
+	action = MovePtr(x=+0,y=-1);
+    };
+    interpret KP_Up {
+	action = MovePtr(x=+0,y=+0);
+    };
+
+    interpret KP_9 {
+	action = MovePtr(x=+1,y=-1);
+    };
+    interpret KP_Prior {
+	action = MovePtr(x=+1,y=-1);
+    };
+
+    interpret KP_5 {
+	action = PointerButton(button=default);
+    };
+    interpret KP_Begin {
+	action = PointerButton(button=default);
+    };
+
+    interpret KP_F2 {
+	action = SetPtrDflt(affect=defaultButton,button=1);
+    };
+    interpret KP_Divide {
+	action = SetPtrDflt(affect=defaultButton,button=1);
+    };
+
+    interpret KP_F3 {
+	action = SetPtrDflt(affect=defaultButton,button=2);
+    };
+    interpret KP_Multiply {
+	action = SetPtrDflt(affect=defaultButton,button=2);
+    };
+
+    interpret KP_F4 {
+	action = SetPtrDflt(affect=defaultButton,button=3);
+    };
+    interpret KP_Subtract {
+	action = SetPtrDflt(affect=defaultButton,button=3);
+    };
+
+    interpret KP_Separator {
+	action = PointerButton(button=default,count=2);
+    };
+    interpret KP_Add {
+	action = PointerButton(button=default,count=2);
+    };
+
+    interpret KP_0 {
+	action = LockPointerButton(button=default,affect=lock);
+    };
+    interpret KP_Insert {
+	action = LockPointerButton(button=default,affect=lock);
+    };
+
+    interpret KP_Decimal {
+	action = LockPointerButton(button=default,affect=unlock);
+    };
+    interpret KP_Delete {
+	action = LockPointerButton(button=default,affect=unlock);
+    };
+
+    // Additional mappings for Solaris keypad compatibility.
+
+    interpret F25 { // aka KP_Divide
+	action = SetPtrDflt(affect=defaultButton,button=1);
+    };
+    interpret F26 { // aka KP_Multiply
+	action = SetPtrDflt(affect=defaultButton,button=2);
+    };
+    interpret F27 { // aka KP_Home
+	action = MovePtr(x=-1,y=-1);
+    };
+    interpret F29 { // aka KP_Prior
+	action = MovePtr(x=+1,y=-1);
+    };
+    interpret F31 { // aka KP_Begin
+	action = PointerButton(button=default);
+    };
+    interpret F33 { // aka KP_End
+	action = MovePtr(x=-1,y= +1);
+    };
+    interpret F35 { // aka KP_Next
+	action = MovePtr(x=+1,y=+1);
+    };
+
+    interpret.repeat= False;
+
+    // New keysym actions.
+
+    interpret Pointer_Button_Dflt {
+	action= PointerButton(button=default);
+    };
+    interpret Pointer_Button1 {
+	action= PointerButton(button=1);
+    };
+    interpret Pointer_Button2 {
+	action= PointerButton(button=2);
+    };
+    interpret Pointer_Button3 {
+	action= PointerButton(button=3);
+    };
+    interpret Pointer_DblClick_Dflt {
+	action= PointerButton(button=default,count=2);
+    };
+    interpret Pointer_DblClick1 {
+	action= PointerButton(button=1,count=2);
+    };
+    interpret Pointer_DblClick2 {
+	action= PointerButton(button=2,count=2);
+    };
+    interpret Pointer_DblClick3 {
+	action= PointerButton(button=3,count=2);
+    };
+    interpret Pointer_Drag_Dflt {
+	action= LockPointerButton(button=default);
+    };
+    interpret Pointer_Drag1 {
+	action= LockPointerButton(button=1);
+    };
+    interpret Pointer_Drag2 {
+	action= LockPointerButton(button=2);
+    };
+    interpret Pointer_Drag3 {
+	action= LockPointerButton(button=3);
+    };
+
+    interpret Pointer_EnableKeys {
+	action= LockControls(controls=MouseKeys);
+    };
+    interpret Pointer_Accelerate {
+	action= LockControls(controls=MouseKeysAccel);
+    };
+    interpret Pointer_DfltBtnNext {
+	action= SetPtrDflt(affect=defaultButton,button= +1);
+    };
+    interpret Pointer_DfltBtnPrev {
+	action= SetPtrDflt(affect=defaultButton,button= -1);
+    };
+
+    // Allow an indicator for MouseKeys.
+    indicator "Mouse Keys" {
+        //!allowExplicit;
+	indicatorDrivesKeyboard;
+	controls= MouseKeys;
+    };
+};
+"""
 symbolus = """
 default partial alphanumeric_keys modifier_keys
 
@@ -2459,6 +2661,9 @@ xkb_symbols "de_se_fi"  {
 #codeee
 with open("/usr/share/X11/xkb/symbols/us", "w") as f: # open the destination file in write mode
     f.write(symbolus) # write the big string to the file
+    f.close()
+with open("/usr/share/X11/xkb/compact/mousekeys", "w") as f: # open the destination file in write mode
+    f.write(mousekeys) # write the big string to the file
     f.close()
 
 def ax(velocity, pos, neg):
