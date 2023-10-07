@@ -13,8 +13,7 @@ try:
     import keyboard 
     import mouse
 except:
-    os.system("sudo apt install xdotool -y")
-    os.system("sudo apt install xkbset -y")
+    os.system("sudo apt install xkbset xdotool -y")
     os.system("git clone https://github.com/boppreh/keyboard")
     os.system("mv keyboard keyboard2")
     os.system("mv keyboard2/keyboard .")
@@ -2976,8 +2975,8 @@ while True:
 #         keyboard2.release(Key.alt)
 #         keyboard2.release(Key.shift)
         os.system("xdotool keyup ctrl &")
-        os.system("xdotool keydown alt &")
-        os.system("xdotool keydown shift &")
+        os.system("xdotool keyup alt &")
+        os.system("xdotool keyup shift &")
  #      os.system( "xdotool keyup u && xdotool keyup y && xdotool keyup h && xdotool keyup o & ")
         os.system("echo > .cachemouse &")
         key = 0
