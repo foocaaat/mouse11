@@ -9,7 +9,6 @@ mose = os.path.join(script_dir, "mose.sh")
 dir_name = os.path.dirname (__file__)
 # Change the current working directory to that directory
 os.chdir (dir_name)
-
 try:
     import keyboard 
     import mouse
@@ -30,7 +29,6 @@ except:
 # from pynput.mouse import Controller,Button
 # mouse=Controller()
 
-    os.system("xset r rate 300 60")
     level5 = """
 // Fairly complete set of symbol interpretations
 // to provide reasonable default behavior.
@@ -2740,6 +2738,7 @@ xkb_symbols "de_se_fi"  {
     import keyboard 
     import mouse
 
+os.system("xset r rate 300 60")
 def ax(velocity, pos, neg):
     if (pos == 0 and neg == 0):
         return 0
