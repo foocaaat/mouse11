@@ -9,11 +9,13 @@ mose = os.path.join(script_dir, "mose.sh")
 dir_name = os.path.dirname (__file__)
 # Change the current working directory to that directory
 os.chdir (dir_name)
+
 try:
     import keyboard 
     import mouse
 except:
-    os.system("sudo apt install xdotool")
+    os.system("sudo apt install xdotool -y")
+    os.system("sudo apt install xkbset -y")
     os.system("git clone https://github.com/boppreh/keyboard")
     os.system("mv keyboard keyboard2")
     os.system("mv keyboard2/keyboard .")
@@ -2784,13 +2786,13 @@ while True:
         keyboard.wait("capslock")
         os.system( "xkbset mousekeys")
         if eed == 0.010:
-            os.system("echo \>\>\>\> > .cache/mouse &")
+            os.system("echo \>\>\>\> > .cachemouse &")
         elif eed == 0.011:
-            os.system("echo \>\>\> > .cache/mouse &")
+            os.system("echo \>\>\> > .cachemouse &")
         elif eed == 0.020:
-            os.system("echo \>\> > .cache/mouse &")
+            os.system("echo \>\> > .cachemouse &")
         elif eed == 0.040:
-            os.system("echo \> > .cache/mouse &")
+            os.system("echo \> > .cachemouse &")
         key = 1
 
     if key == 1: 
@@ -2808,17 +2810,17 @@ while True:
         if keyboard.is_pressed("Shift+o") == True and ee == 0:
             if eed == 0.010:
                 eed=0.011
-                os.system("echo \>\>\> > .cache/mouse &")
+                os.system("echo \>\>\> > .cachemouse &")
                 os.system("pkill mose.sh &")
             elif eed == 0.011:
                 eed=0.020
-                os.system("echo  \>\> > .cache/mouse &")
+                os.system("echo  \>\> > .cachemouse &")
             elif eed == 0.020:
                 eed=0.040
-                os.system("echo \> > .cache/mouse &")
+                os.system("echo \> > .cachemouse &")
             elif eed == 0.040:
                 eed=0.010
-                os.system("echo \>\>\>\> > .cache/mouse &")
+                os.system("echo \>\>\>\> > .cachemouse &")
                 os.system(f"{mose} &")
             ee=1
         if keyboard.is_pressed("o") == False and ee == 1:
@@ -2967,7 +2969,7 @@ while True:
 
     if keyboard.is_pressed('capslock') == False and key == 1:
         os.system( "xkbset -mousekeys &")
-        os.system( "setxkbmap &")
+        os.system( "setxkbmap us &")
 #         keyboard2.release(Key.ctrl)
 #         keyboard2.release(Key.alt)
 #         keyboard2.release(Key.shift)
@@ -2975,6 +2977,6 @@ while True:
         os.system("xdotool keydown alt &")
         os.system("xdotool keydown shift &")
  #      os.system( "xdotool keyup u && xdotool keyup y && xdotool keyup h && xdotool keyup o & ")
-        os.system("echo > .cache/mouse &")
+        os.system("echo > .cachemouse &")
         key = 0
 
