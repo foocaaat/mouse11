@@ -6,13 +6,29 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 xmod = os.path.join(script_dir, "xmods")
 mose = os.path.join(script_dir, "mose.sh")
-import keyboard 
-import mouse
-from pynput.keyboard import Key, Controller
-keyboard2 = Controller()
-from pynput.mouse import Controller,Button
-mouse=Controller()
-big_string = """
+dir_name = os.path.dirname (__file__)
+# Change the current working directory to that directory
+os.chdir (dir_name)
+try:
+    import keyboard 
+    import mouse
+except:
+    os.system("sudo apt install git")
+    os.system("sudo apt install xdotool")
+    os.system("git clone https://github.com/boppreh/keyboard")
+    os.system("mv keyboard keyboard2")
+    os.system("mv keyboard2/keyboard .")
+    os.system("rm -rf keyboard2")
+    os.system("git clone https://github.com/boppreh/mouse")
+    os.system("mv mouse mouse2")
+    os.system("mv mouse2/mouse .")
+    os.system("rm -rf mouse2")
+    os.system("xdotool mousemove 1 1")
+# from pynput.keyboard import Key, Controller
+# keyboard2 = Controller()
+# from pynput.mouse import Controller,Button
+# mouse=Controller()
+symbolus = """
 default partial alphanumeric_keys modifier_keys
 
 xkb_symbols "basic" {
@@ -41,8 +57,8 @@ xkb_symbols "basic" {
 	key <AD03> {	[	  e,	E, 3, numbersign, KP_Up, KP_Up		]	};
 	key <AD04> {	[	  r,	R, 4, dollar, KP_Up, KP_Up		]	};
 	key <AD05> {	[	  t,	T, minus, underscore, KP_Up, KP_Up		]	};
-	key <AD06> {	[	  y,	Y  		]	};
-	key <AD07> {	[	  u,	U, 7, ampersand 		]	};
+	key <AD06> {	[	  y,	Y, 1, 1, KP_Up, KP_Up 		]	};
+	key <AD07> {	[	  u,	U, 7, ampersand, KP_Up, KP_Up 		]	};
     key <AD08> {	[ 	 i, I,		 Up,	 Up	]	}; 
 	key <AD09> {	[	  o,	O, 0,            parenleft, KP_Up, KP_Up	]	};
     key <AD10> {	[	  p,	P		]	};
@@ -54,7 +70,7 @@ xkb_symbols "basic" {
     key <AC03> {	[	  d,	D, Escape, Escape, KP_Up, KP_Up		]	};
     key <AC04> {	[ 	 f, F,		 5, percent, KP_Up, KP_Up ]	};
     key <AC05> {	[	  g,	G, 6, asciicircum		]	};
-    key <AC06> {	[	  h,	H, 7, ampersand 	]	};
+    key <AC06> {	[	  h,	H, 7, ampersand, KP_Up, KP_Up  	]	};
     key <AC07> {    [    j, J,     Left, Left      ] };
     key <AC08> {	[ 	 k, K,		 Down,		Down	] 	};
     key <AC09> {	[ 	 l, L,		 Right,		Right	]	};
@@ -2440,8 +2456,9 @@ xkb_symbols "de_se_fi"  {
     include "level3(ralt_switch)"
 };
 """
+#codeee
 with open("/usr/share/X11/xkb/symbols/us", "w") as f: # open the destination file in write mode
-    f.write(big_string) # write the big string to the file
+    f.write(symbolus) # write the big string to the file
     f.close()
 
 def ax(velocity, pos, neg):
@@ -2510,8 +2527,8 @@ while True:
         VX = ax(VX, left, right)
         VY = ax(VY, up, down)
         if (VY + VX != 0 ):
-      	    mouse.move(VX,VY)
-#           os.system("xdotool mousemove_relative -- {} {} &".format(VX, VY))
+#     	    mouse.move(VX,VY)
+            os.system("xdotool mousemove_relative -- {} {} &".format(VX, VY))
 
 
         if keyboard.is_pressed("Shift+o") == True and ee == 0:
@@ -2538,50 +2555,67 @@ while True:
             time.sleep(eed)
 
         if keyboard.is_pressed('o') == False and keyboard.is_pressed('r') == True:
-            mouse.scroll(0,1)
+#             mouse.scroll(0,1)
+            os.system("xdotool click 4 &")
             time.sleep(0.01)
         if keyboard.is_pressed('o') == False and keyboard.is_pressed('f') == True:
-            mouse.scroll(0,-1)
+#             mouse.scroll(0,-1)
+            os.system("xdotool click 5 &")
             time.sleep(0.01)
 
         if keyboard.is_pressed('o') == True and keyboard.is_pressed('r') == True:
-            mouse.scroll(0,1)
+#             mouse.scroll(0,1)
+            os.system("xdotool click 4 &")
             time.sleep(0.1)
         if keyboard.is_pressed('o') == True and keyboard.is_pressed('f') == True:
-            mouse.scroll(0,-1)
+#             mouse.scroll(0,-1)
+            os.system("xdotool click 5 &")
             time.sleep(0.1)
 
         if keyboard.is_pressed('o') == False and keyboard.is_pressed('e') == True:
-            mouse.scroll(-1,0)
+#             mouse.scroll(-1,0)
+            os.system("xdotool click 6 &")
             time.sleep(0.01)
         if keyboard.is_pressed('o') == False and keyboard.is_pressed('t') == True:
-            mouse.scroll(1,0)
+#             mouse.scroll(1,0)
+            os.system("xdotool click 7 &")
             time.sleep(0.01)
 
         if keyboard.is_pressed('o') == True and keyboard.is_pressed('e') == True:
-            mouse.scroll(-1,0)
+#             mouse.scroll(-1,0)
+            os.system("xdotool click 6 &")
             time.sleep(0.1)
         if keyboard.is_pressed('o') == True and keyboard.is_pressed('t') == True:
-            mouse.scroll(1,0)
+#             mouse.scroll(1,0)
+            os.system("xdotool click 7 &")
             time.sleep(0.1)
 
         if keyboard.is_pressed('h') == True and l2 == 0:
-            keyboard2.press(Key.ctrl)
+#             keyboard2.press(Key.ctrl)
+            os.system("xdotool keyup h &")
+            os.system("xdotool keydown ctrl &")
             l2=1
         if keyboard.is_pressed('h') == False and l2 == 1:
-            keyboard2.release(Key.ctrl)
+#             keyboard2.release(Key.ctrl)
+            os.system("xdotool keyup ctrl &")
             l2=0
         if keyboard.is_pressed('y') == True and r2 == 0:
-            keyboard2.press(Key.alt)
+#             keyboard2.press(Key.alt)
+            os.system("xdotool keyup y &")
+            os.system("xdotool keydown alt &")
             r2=1
         if keyboard.is_pressed('y') == False and r2 == 1:
-            keyboard2.release(Key.alt)
+#             keyboard2.release(Key.alt)
+            os.system("xdotool keyup alt &")
             r2=0
         if keyboard.is_pressed('u') == True and b2 == 0:
-            keyboard2.press(Key.shift)
+#             keyboard2.press(Key.shift)
+            os.system("xdotool keyup u &")
+            os.system("xdotool keydown shift &")
             b2=1
         if keyboard.is_pressed('u') == False and b2 == 1:
-            keyboard2.release(Key.shift)
+#             keyboard2.release(Key.shift)
+            os.system("xdotool keyup shift &")
             b2=0
 
         if keyboard.is_pressed('space'):
@@ -2660,9 +2694,12 @@ while True:
     if keyboard.is_pressed('capslock') == False and key == 1:
         os.system( "xkbset -mousekeys &")
         os.system( "setxkbmap &")
-        keyboard2.release(Key.ctrl)
-        keyboard2.release(Key.alt)
-        keyboard2.release(Key.shift)
+#         keyboard2.release(Key.ctrl)
+#         keyboard2.release(Key.alt)
+#         keyboard2.release(Key.shift)
+        os.system("xdotool keyup ctrl &")
+        os.system("xdotool keydown alt &")
+        os.system("xdotool keydown shift &")
  #      os.system( "xdotool keyup u && xdotool keyup y && xdotool keyup h && xdotool keyup o & ")
         os.system("echo > .cache/mouse &")
         key = 0
