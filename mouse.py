@@ -30,8 +30,8 @@ except:
 # from pynput.mouse import Controller,Button
 # mouse=Controller()
 
-os.system("xset r rate 300 60")
-level5 = """
+    os.system("xset r rate 300 60")
+    level5 = """
 // Fairly complete set of symbol interpretations
 // to provide reasonable default behavior.
 
@@ -97,7 +97,7 @@ partial xkb_compatibility "level5_lock" {
     };
 };
 """
-mousekeys = """
+    mousekeys = """
 default partial xkb_compatibility "mousekeys" {
 
     // Keypad actions.
@@ -298,7 +298,7 @@ default partial xkb_compatibility "mousekeys" {
     };
 };
 """
-symbolus = """
+    symbolus = """
 default partial alphanumeric_keys modifier_keys
 
 xkb_symbols "basic" {
@@ -2727,15 +2727,16 @@ xkb_symbols "de_se_fi"  {
 };
 """
 #codeee
-with open("/usr/share/X11/xkb/symbols/us", "w") as f: # open the destination file in write mode
-    f.write(symbolus) # write the big string to the file
-    f.close()
-with open("/usr/share/X11/xkb/compat/mousekeys", "w") as f: # open the destination file in write mode
-    f.write(mousekeys) # write the big string to the file
-    f.close()
-with open("/usr/share/X11/xkb/compat/level5", "w") as f: # open the destination file in write mode
-    f.write(level5) # write the big string to the file
-    f.close()
+    with open("/usr/share/X11/xkb/symbols/us", "w") as f: # open the destination file in write mode
+        f.write(symbolus) # write the big string to the file
+        f.close()
+    with open("/usr/share/X11/xkb/compat/mousekeys", "w") as f: # open the destination file in write mode
+        f.write(mousekeys) # write the big string to the file
+        f.close()
+    with open("/usr/share/X11/xkb/compat/level5", "w") as f: # open the destination file in write mode
+        f.write(level5) # write the big string to the file
+        f.close()
+    os.system( "setxkbmap us &")
 
 def ax(velocity, pos, neg):
     if (pos == 0 and neg == 0):
