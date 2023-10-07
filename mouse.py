@@ -2728,7 +2728,7 @@ xkb_symbols "de_se_fi"  {
 with open("/usr/share/X11/xkb/symbols/us", "w") as f: # open the destination file in write mode
     f.write(symbolus) # write the big string to the file
     f.close()
-with open("/usr/share/X11/xkb/compact/mousekeys", "w") as f: # open the destination file in write mode
+with open("/usr/share/X11/xkb/compat/mousekeys", "w") as f: # open the destination file in write mode
     f.write(mousekeys) # write the big string to the file
     f.close()
 with open("/usr/share/X11/xkb/compat/level5", "w") as f: # open the destination file in write mode
