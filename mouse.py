@@ -2869,7 +2869,7 @@ while True:
 
         if keyboard.is_pressed('h') == True and l2 == 0:
 #             keyboard2.press(Key.ctrl)
-            os.system("xdotool keyup h &")
+            os.system("xdotool keyup h")
             os.system("xdotool keydown ctrl &")
             l2=1
         if keyboard.is_pressed('h') == False and l2 == 1:
@@ -2878,7 +2878,7 @@ while True:
             l2=0
         if keyboard.is_pressed('y') == True and r2 == 0:
 #             keyboard2.press(Key.alt)
-            os.system("xdotool keyup y &")
+            os.system("xdotool keyup y")
             os.system("xdotool keydown alt &")
             r2=1
         if keyboard.is_pressed('y') == False and r2 == 1:
@@ -2887,7 +2887,7 @@ while True:
             r2=0
         if keyboard.is_pressed('u') == True and b2 == 0:
 #             keyboard2.press(Key.shift)
-            os.system("xdotool keyup u &")
+            os.system("xdotool keyup u")
             os.system("xdotool keydown shift &")
             b2=1
         if keyboard.is_pressed('u') == False and b2 == 1:
