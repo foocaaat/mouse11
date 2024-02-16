@@ -23,12 +23,14 @@ except:
     os.system("mv mouse2/mouse .")
     os.system("rm -rf mouse2")
     os.system("xdotool mousemove 1 1")
+    import keyboard 
+    import mouse
 # from pynput.keyboard import Key, Controller
 # keyboard2 = Controller()
 # from pynput.mouse import Controller,Button
 # mouse=Controller()
 
-    level5 = """
+level5 = """
 // Fairly complete set of symbol interpretations
 // to provide reasonable default behavior.
 
@@ -94,7 +96,7 @@ partial xkb_compatibility "level5_lock" {
     };
 };
 """
-    mousekeys = """
+mousekeys = """
 default partial xkb_compatibility "mousekeys" {
 
     // Keypad actions.
@@ -149,7 +151,7 @@ default partial xkb_compatibility "mousekeys" {
     interpret KP_8 {
 	action = MovePtr(x=+0,y=-1);
     };
-    interpret KP_Up {
+    interpret KP_Left {
 	action = MovePtr(x=+0,y=+0);
     };
 
@@ -295,7 +297,7 @@ default partial xkb_compatibility "mousekeys" {
     };
 };
 """
-    symbolus = """
+symbolus = """
 default partial alphanumeric_keys modifier_keys
 
 xkb_symbols "basic" {
@@ -320,24 +322,24 @@ xkb_symbols "basic" {
 
 
 	key <AD01> {	[	  q,	Q, grave,	asciitilde	]	};
-	key <AD02> {	[	  w,	W, 2, at, KP_Up, KP_Up  ]	};
-	key <AD03> {	[	  e,	E, 3, numbersign, KP_Up, KP_Up		]	};
-	key <AD04> {	[	  r,	R, 4, dollar, KP_Up, KP_Up		]	};
-	key <AD05> {	[	  t,	T, minus, underscore, KP_Up, KP_Up		]	};
-	key <AD06> {	[	  y,	Y, 1, 1, KP_Up, KP_Up 		]	};
-	key <AD07> {	[	  u,	U, 7, ampersand, KP_Up, KP_Up 		]	};
+	key <AD02> {	[	  w,	W, 2, at, KP_Left, KP_Left  ]	};
+	key <AD03> {	[	  e,	E, 3, numbersign, KP_Left, KP_Left		]	};
+	key <AD04> {	[	  r,	R, 4, dollar, KP_Left, KP_Left		]	};
+	key <AD05> {	[	  t,	T, minus, underscore, KP_Left, KP_Left		]	};
+	key <AD06> {	[	  y,	Y, 1, 1, KP_Left, KP_Left 		]	};
+	key <AD07> {	[	  u,	U, 7, ampersand, KP_Left, KP_Left 		]	};
     key <AD08> {	[ 	 i, I,		 Up,	 Up	]	}; 
-	key <AD09> {	[	  o,	O, 0,    parenleft, KP_Up, KP_Up	]	};
+	key <AD09> {	[	  o,	O, 0,    parenleft, KP_Left, KP_Left	]	};
     key <AD10> {	[	  p,	P		]	};
     key <AD11> {	[ bracketleft,	braceleft	]	};
     key <AD12> {	[ bracketright,	braceright	]	};
 
-    key <AC01> {	[	  a,	A, 1, exclam, KP_Up, KP_Up		]	};
-    key <AC02> {	[	  s,	S, Return, Return, KP_Up, KP_Up		]	};
-    key <AC03> {	[	  d,	D, Escape, Escape, KP_Up, KP_Up		]	};
-    key <AC04> {	[ 	 f, F,		 5, percent, KP_Up, KP_Up ]	};
+    key <AC01> {	[	  a,	A, 1, exclam, KP_Left, KP_Left		]	};
+    key <AC02> {	[	  s,	S, Escape, Escape, KP_Left, KP_Left		]	};
+    key <AC03> {	[	  d,	D, Escape, Escape, KP_Left, KP_Left		]	};
+    key <AC04> {	[ 	 f, F,		 5, percent, KP_Left, KP_Left ]	};
     key <AC05> {	[	  g,	G, 6, asciicircum		]	};
-    key <AC06> {	[	  h,	H, 7, ampersand, KP_Up, KP_Up  	]	};
+    key <AC06> {	[	  h,	H, 7, ampersand, KP_Left, KP_Left  	]	};
     key <AC07> {    [    j, J,     Left, Left      ] };
     key <AC08> {	[ 	 k, K,		 Down,		Down	] 	};
     key <AC09> {	[ 	 l, L,		 Right,		Right	]	};
@@ -345,10 +347,10 @@ xkb_symbols "basic" {
     key <AC11> {	[ apostrophe,	quotedbl	]	};
 
     key <AB01> {	[	  z,	Z, less, greater 	]	};
-    key <AB02> {	[	  x,	X, bracketleft, bracketright, KP_Up, KP_Up		]	};
+    key <AB02> {	[	  x,	X, bracketleft, bracketright, KP_Left, KP_Left		]	};
     key <AB03> {	[	  c,	C, braceleft, braceright, Pointer_Button3, Pointer_Button3, Pointer_Button3, Pointer_Button3		]	};
     key <AB04> {	[	  v,	V, parenleft, parenright		]	};
-    key <AB05> {	[	  b,	B, equal,	plus, KP_Up, KP_Up		]	};
+    key <AB05> {	[	  b,	B, equal,	plus, KP_Left, KP_Left		]	};
     key <AB06> {	[	  n,	N, 8, asterisk		]	};
     key <AB07> {	[	  m,	M, 9, parenleft, Pointer_Button2, Pointer_Button2, Pointer_Button2, Pointer_Button2		]	};
     key <AB08> {	[     comma,	less, comma,	less		]	};
@@ -357,7 +359,7 @@ xkb_symbols "basic" {
 
     key <BKSL> {	[ backslash,         bar	]	};
 
-   key <SPCE> { [        space,        space,  KP_Up, KP_Up, Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] };
+   key <SPCE> { [        space,        space,  KP_Left, KP_Left, Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] };
    key <TLDE> { [    grave, asciitilde,  dead_grave,   dead_tilde      ] };
    key <AC11> { [apostrophe,quotedbl,    dead_acute,   dead_diaeresis  ] };
 
@@ -389,9 +391,9 @@ xkb_symbols "euro" {
     key <AE12> {  [           equal,                 plus,                  notequal,               U2248 ]};
 
     key <AD01> {  [      Arabic_dad,         Arabic_fatha,                  NoSymbol,               U2066 ]};
-    key <AD02> {  [      Arabic_sad,      Arabic_fathatan,                  NoSymbol,               U2067, KP_Up, KP_Up ]};
+    key <AD02> {  [      Arabic_sad,      Arabic_fathatan,                  NoSymbol,               U2067, KP_Left, KP_Left ]};
     key <AD03> {  [     Arabic_theh,         Arabic_damma,                  NoSymbol,               U2068 ]};
-    key <AD04> {  [      Arabic_qaf,      Arabic_dammatan,                  NoSymbol,               U2069, KP_Up, KP_Up ]};
+    key <AD04> {  [      Arabic_qaf,      Arabic_dammatan,                  NoSymbol,               U2069, KP_Left, KP_Left ]};
     key <AD05> {  [      Arabic_feh,                UFEF9,                Arabic_veh,            NoSymbol ]};
     key <AD06> {  [    Arabic_ghain,Arabic_hamzaunderalef,                  NoSymbol,               U202A ]};
     key <AD07> {  [      Arabic_ain,                grave,                  NoSymbol,               U202B ]};
@@ -401,10 +403,10 @@ xkb_symbols "euro" {
     key <AD11> {  [     Arabic_jeem,                 less,              Arabic_tcheh,               U200F ]};
     key <AD12> {  [      Arabic_dal,              Arabic_thal,                  NoSymbol,               U061C ]};
 
-    key <AC01> {  [    Arabic_sheen,         Arabic_kasra,                  NoSymbol,            NoSymbol, KP_Up, KP_Up ]};
-    key <AC02> {  [     Arabic_seen,      Arabic_kasratan, Backspace, Backspace, KP_Up, KP_Up ]};
-    key <AC03> {  [      Arabic_yeh,         bracketright, Escape, Escape, KP_Up, KP_Up ]};
-    key <AC04> {  [      Arabic_beh,          bracketleft,		 Return, Return, KP_Up, KP_Up ]};
+    key <AC01> {  [    Arabic_sheen,         Arabic_kasra,                  NoSymbol,            NoSymbol, KP_Left, KP_Left ]};
+    key <AC02> {  [     Arabic_seen,      Arabic_kasratan, Backspace, Backspace, KP_Left, KP_Left ]};
+    key <AC03> {  [      Arabic_yeh,         bracketright, Escape, Escape, KP_Left, KP_Left ]};
+    key <AC04> {  [      Arabic_beh,          bracketleft,		 Return, Return, KP_Left, KP_Left ]};
     key <AC05> {  [      Arabic_lam,               U0FEF7,                  NoSymbol,            NoSymbol ]};
     key <AC06> {  [     Arabic_alef,   Arabic_hamzaonalef,                     U0671,            NoSymbol ]};
     key <AC07> {  [      Arabic_teh,       Arabic_tatweel,     Left, Left ]};
@@ -439,12 +441,12 @@ xkb_symbols "euro" {
     key <AE10> { [ Arabic_0,      parenleft, 0, NoSymbol ] };
 
 
-   key <SPCE> { [        space,        space,  0x0800, Pointer_EnableKeys, Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] };
+   key <SPCE> { [        space,        space,  KP_Left, KP_Left, Pointer_Button1, Pointer_Button1, Pointer_Button1, Pointer_Button1 ] };
    key <TLDE> { [    grave, asciitilde,  dead_grave,   dead_tilde      ] };
-
+   key <AC11> { [apostrophe,quotedbl,    dead_acute,   dead_diaeresis  ] };
 
    include "level3(ralt_switch)"
-   key <CAPS> { [ ISO_Level5_Shift ] }; // Cur/Num Modifier
+   key <CAPS> { [ ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift,ISO_Level5_Shift ] }; // Cur/Num Modifier
    modifier_map Mod3 { <CAPS> };
 };
 
@@ -2724,18 +2726,16 @@ xkb_symbols "de_se_fi"  {
 };
 """
 #codeee
-    with open("/usr/share/X11/xkb/symbols/us", "w") as f: # open the destination file in write mode
-        f.write(symbolus) # write the big string to the file
-        f.close()
-    with open("/usr/share/X11/xkb/compat/mousekeys", "w") as f: # open the destination file in write mode
-        f.write(mousekeys) # write the big string to the file
-        f.close()
-    with open("/usr/share/X11/xkb/compat/level5", "w") as f: # open the destination file in write mode
-        f.write(level5) # write the big string to the file
-        f.close()
-    os.system( "setxkbmap us &")
-    import keyboard 
-    import mouse
+with open("/usr/share/X11/xkb/symbols/us", "w") as f: # open the destination file in write mode
+    f.write(symbolus) # write the big string to the file
+    f.close()
+with open("/usr/share/X11/xkb/compat/mousekeys", "w") as f: # open the destination file in write mode
+    f.write(mousekeys) # write the big string to the file
+    f.close()
+with open("/usr/share/X11/xkb/compat/level5", "w") as f: # open the destination file in write mode
+    f.write(level5) # write the big string to the file
+    f.close()
+os.system( "setxkbmap us &")
 
 os.system("xset r rate 300 60")
 def ax(velocity, pos, neg):
